@@ -1,19 +1,19 @@
-﻿using FinanciamentoApp;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-Console.WriteLine("Aplicação de Financiamento");
+namespace Conhecimento_Basico
+{
+    public class Financia
+    {
+        public static double CalculoFinanciamento(double valor_emprestimo, double tx_juros, double parcelas)
+        {
+            double taxa = (valor_emprestimo / 100) * tx_juros;
+            double resultado = (valor_emprestimo / parcelas) + taxa;
+            return resultado;
+        }
+    }
 
-double valor_emprestimo = 1000;
-double prestacoes = 10;
-double tx_juros = 5;
-double resultado;
-
-
-resultado = Financia.CalculoFinanciamento(valor_emprestimo, prestacoes, tx_juros);
-Console.WriteLine(resultado);
-
-
-
-
-
-
-
+}
