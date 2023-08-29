@@ -10,7 +10,8 @@ namespace FinanciamentoApp
     {
         public static double CalculoFinanciamento(double valor_emprestimo, double tx_juros, double parcelas)
         {
-            return (valor_emprestimo * tx_juros * parcelas) / 100;
+            double taxa = (valor_emprestimo / 100) * tx_juros;
+            return (valor_emprestimo / parcelas) + taxa;
         }
     }
 
